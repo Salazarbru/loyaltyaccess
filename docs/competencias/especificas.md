@@ -22,13 +22,13 @@ Las competencias específicas corresponden a los conocimientos y habilidades té
 
 ---
 
-## [Nombre del integrante]
+## [Freddy Emiliano Correa Ojeda]
 
 | Competencia | Justificación |
 |-------------|---------------|
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
+| Análisis de historias de usuario | Se determinaron las diferentes historias para cada tipo de usuario contemplado. |
+| Rediseño y actualización del README | Se rediseñó y actualizó el README en main, agregando las rutas de acceso y asignando los roles a cada integrante. |
+
 
 ---
 
