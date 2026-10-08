@@ -23,7 +23,7 @@ Las competencias específicas corresponden a los conocimientos y habilidades té
 
 ---
 
-## [Freddy Emiliano Correa Ojeda]
+## Freddy Emiliano Correa Ojeda
 
 | Competencia | Justificación |
 |-------------|---------------|
