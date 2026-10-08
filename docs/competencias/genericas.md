@@ -12,13 +12,14 @@ Las competencias genéricas corresponden a las habilidades generales desarrollad
 
 ---
 
-## [Nombre del integrante]
+## Rodrigo Rivera Gamboa
 
-| Competencia | Justificación |
-|-------------|---------------|
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
+|   Competencia   | Justificación                                                                                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Organización    | Se organizaron las actividades del equipo mediante la asignación y seguimiento de issues, manteniendo un orden en las tareas necesarias para completar la documentación del proyecto. |
+| Responsabilidad | Se asumieron las actividades asignadas y se dio seguimiento a su cumplimiento, incluyendo la elaboración de la descripción del producto y la bitácora de contribución.                |
+| Adaptabilidad   | Se realizaron ajustes en la organización del trabajo conforme surgieron cambios y necesidades durante el desarrollo de la documentación de LoyaltyAccess.                             |
+
 
 ---
 
