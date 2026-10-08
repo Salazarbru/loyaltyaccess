@@ -33,13 +33,13 @@ Las competencias específicas corresponden a los conocimientos y habilidades té
 
 ---
 
-## [Nombre del integrante]
+## Alvarez Vázquez Mauricio
 
 | Competencia | Justificación |
 |-------------|---------------|
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
+| Gestión de proyectos de software| Cree mi branch con competencias y el video descriptivo|
+| Trabajo colaborativo | Me coordiné con mi equipo para dar y recibir feedback
+| Diseño de video | Realicé un video descriptivo lo que me permitió mejorar mis hablidades blandas y tener un dominio acerca del producto que estamis exponiendo |
 
 ---
 

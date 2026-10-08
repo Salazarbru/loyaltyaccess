@@ -33,13 +33,13 @@ Las competencias genéricas corresponden a las habilidades generales desarrollad
 
 ---
 
-## [Nombre del integrante]
+## Alvarez Vazquez Mauricio
 
 | Competencia | Justificación |
 |-------------|---------------|
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
+| Comunicación  | Resumí y describí lo más fundamental de nuestro proyecto.|
+| Trabajo en equipo | Recibi ayuda y ayudé a otros integrantes a utilizar git |
+| Análisis y resolución de problemas | Aporté en la creación de la idea LoyalityAccess |
 
 ---
 
