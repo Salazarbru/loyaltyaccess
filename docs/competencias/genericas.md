@@ -12,7 +12,7 @@ Las competencias genéricas corresponden a las habilidades generales desarrollad
 
 ---
 
-## Rodrigo Rivera
+## Rodrigo Rivera Gamboa
 
 |   Competencia   | Justificación                                                                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
