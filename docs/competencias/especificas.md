@@ -12,13 +12,14 @@ Las competencias específicas corresponden a los conocimientos y habilidades té
 
 ---
 
-## [Nombre del integrante]
+## Rodrigo Rivera Gamboa
 
-| Competencia | Justificación |
-|-------------|---------------|
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
+|   Competencia                          |   Justificación                                                                                                                                              |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Gestión de proyectos de software       | Se utilizaron issues, responsables y revisiones mediante pull requests para organizar y dar seguimiento a las actividades del proyecto.                      |
+| Especificación de sistemas de software | Se analizó y documentó el propósito, usuarios, escenarios y alcance de LoyaltyAccess para establecer las características principales del sistema.            |
+| Control de versiones                   | Se utilizó GitHub como repositorio del proyecto para gestionar los cambios realizados en la documentación y coordinar las contribuciones de los integrantes. |
+
 
 ---
 
