@@ -20,6 +20,7 @@
 [![Artefactos](https://img.shields.io/badge/🧩_Artefactos-0891b2?style=for-the-badge)](#-artefactos)
 [![Repositorio](https://img.shields.io/badge/📂_Repositorio-059669?style=for-the-badge)](#-estructura-del-repositorio)
 [![Bitácoras](https://img.shields.io/badge/📊_Bitácoras-d97706?style=for-the-badge)](#-bitácoras)
+[![Entregas](https://img.shields.io/badge/🎬_Entregas-FF0000?style=for-the-badge)](#-entregas)
 [![Competencias](https://img.shields.io/badge/🏅_Competencias-dc2626?style=for-the-badge)](#-competencias)
 [![Equipo](https://img.shields.io/badge/👥_Equipo-ec4899?style=for-the-badge)](#-equipo)
 
@@ -39,7 +40,7 @@ El problema: las tarjetas de cartón se pierden, se falsifican o se llenan sin c
 flowchart LR
     A([👤 Cliente se registra]) --> B[📱 Obtiene su tarjeta con QR]
     B --> C[📷 Escanea el código QR]
-    C --> D[⭐ Acumula sellos o puntos]
+    C --> D[⭐ Acumula visitas/puntos]
     D --> E([🎁 Canjea su premio])
 
     style A fill:#6d28d9,color:#fff,stroke:none
@@ -83,6 +84,7 @@ loyaltyaccess/
 │   ├── 📁 artefactos/       # Casos de uso, diagramas e historias de usuario
 │   ├── 📁 bitacoras/        # Seguimiento semanal
 │   ├── 📁 competencias/     # Competencias específicas y genéricas
+│   ├── 📁 entregables/      # Entregas mensuales en video
 │   ├── 📁 producto/         # Descripción del producto
 │   └── 📁 requisitos/       # Requisitos funcionales y no funcionales
 ├── 📁 src/                  # Código fuente de la aplicación
@@ -98,6 +100,22 @@ loyaltyaccess/
 Seguimiento semanal y reportes de desarrollo del equipo, todo reunido en un solo lugar:
 
 [![Ver todas las bitácoras](https://img.shields.io/badge/📊_Ver_todas_las_bitácoras-d97706?style=for-the-badge)](docs/bitacoras/)
+
+---
+
+## 🎬 Entregas
+
+Cada mes presentamos el avance del proyecto en un video:
+
+<div align="center">
+
+| Entrega | Contenido | Enlace |
+| :---: | :--- | :---: |
+| **Entrega 1** | [📄 Ver Resumen y Detalles](docs/entregables/primera%20entrega.md) | [![Ver en YouTube](https://img.shields.io/badge/-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/N_dXznND_VM) |
+| **Entrega 2** | Próximamente | ![Coming soon](https://img.shields.io/badge/⏳_Coming_soon-6b7280?style=for-the-badge) |
+</div>
+
+> Los enlaces de las siguientes entregas se irán adjuntando conforme se publiquen.
 
 ---
 
