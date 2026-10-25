@@ -45,19 +45,14 @@ classDiagram
     class Dueno {
         +configurarPrograma()
         +gestionarCajeros()
-        +gestionarPremios()
-        +gestionarPromociones()
-        +consultarClientesFrecuentes()
-        +identificarClientesInactivos()
         +verPanel()
         +anularMovimiento()
     }
     class Cajero {
-        -String pinHash
+        -String pin
         -boolean activo
     }
     class AdminPlataforma {
-        +aprobarNegocio()
         +suspenderNegocio()
         +gestionarPlantillas()
     }
@@ -103,8 +98,6 @@ classDiagram
     Negocio "1" --> "*" TarjetaLealtad : emite
     Cliente "1" --> "*" TarjetaLealtad : tiene una por negocio
 ```
-
-> **Nota — el `Cajero` es 100% opcional:** `Negocio` se relaciona con `Cajero` mediante una cardinalidad `"0..*"`, es decir, un negocio puede operar sin ningún cajero registrado. Como `Dueno` hereda de `Operador`, tiene acceso nativo a `registrarCompra()` y `canjearPremio()` y puede realizar todas las operaciones de mostrador desde su propia cuenta principal, sin necesidad de dar de alta empleados. Este diseño permite que LoyaltyAccess esté dirigido tanto a negocios pequeños —personas que operan solo con su celular y su laptop— como a negocios establecidos que sí cuentan con uno o varios cajeros.
 
 ---
 
@@ -182,7 +175,7 @@ classDiagram
         +aplicar() Beneficio
     }
     class PremioDescMonto {
-        -BigDecimal monto
+        -double monto
         +aplicar() Beneficio
     }
     class Nivel {
@@ -220,7 +213,7 @@ classDiagram
         +calcular(Compra compra, TarjetaLealtad tarjeta) int
     }
     class ReglaPorMonto {
-        -BigDecimal montoPorPunto
+        -double montoPorPunto
         -int topePorCompra
         +calcular(Compra compra, TarjetaLealtad tarjeta) int
     }
@@ -236,7 +229,7 @@ classDiagram
         +crearDesdePlantilla(String plantilla) ReglaAcumulacion
     }
     class Compra {
-        -BigDecimal monto
+        -double monto
         -DateTime fecha
         -String idExterno
     }
@@ -270,7 +263,6 @@ classDiagram
     class EventoLealtad {
         -TipoEvento tipo
         -String detalle
-        -Cliente cliente
     }
     class ObservadorLealtad {
         <<interface>>
@@ -354,7 +346,7 @@ classDiagram
 |---|---|---|---|
 | `Usuario` | Abstracta | Datos y comportamiento comunes de acceso. | Padre de `Operador` y `AdminPlataforma`. |
 | `Operador` | Abstracta | Agrupa lo que puede hacer quien atiende en mostrador: registrar compras y canjear premios. | Hereda de `Usuario`; padre de `Dueno` y `Cajero`. |
-| `Dueno` | Concreta | Configura el programa, gestiona cajeros, premios y promociones, anula movimientos, consulta clientes frecuentes e inactivos y consulta el panel; también puede operar directamente si trabaja solo. | Hereda de `Operador`; administra `Negocio`. |
+| `Dueno` | Concreta | Configura el programa, gestiona cajeros, anula movimientos y consulta el panel; también puede operar directamente si trabaja solo. | Hereda de `Operador`; administra `Negocio`. |
 | `Cajero` | Concreta | Empleado opcional que registra compras y canjes con su PIN. | Hereda de `Operador`; pertenece a un `Negocio`. |
 | `AdminPlataforma` | Concreta | Aprueba o suspende negocios y administra plantillas. | Hereda de `Usuario`. |
 | `Negocio` | Concreta | Representa un comercio y agrupa su programa, cajeros y tarjetas. | Pertenece a un `Dueno`; emite `TarjetaLealtad`. |
@@ -396,7 +388,7 @@ classDiagram
 
 ## Notas
 
-- El cajero es opcional: el dueño hereda de `Operador` y puede registrar compras y canjes directamente, lo que permite que un negocio con solo un celular y una laptop use el sistema sin más personal, y que un negocio ya establecido lo use además con uno o varios cajeros en mostrador.
+- El cajero es opcional: el dueño hereda de `Operador` y puede registrar compras y canjes directamente, lo que permite que un negocio con solo un celular y una laptop use el sistema sin más personal.
 - Los nombres de clases no llevan acentos ni la letra ñ (por ejemplo, `Dueno`) para evitar problemas en el código.
 - Los diagramas son del diseño inicial y pueden ajustarse durante el desarrollo; cualquier cambio debe reflejarse en este documento en el mismo sprint.
 - Los módulos de notificaciones, exportación y conectores incluyen funcionalidades opcionales (Google Wallet, API REST) definidas como extras en los requisitos.

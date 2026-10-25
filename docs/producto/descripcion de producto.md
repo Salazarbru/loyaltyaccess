@@ -48,7 +48,7 @@ El dueño configura su negocio y su programa de lealtad (regla de acumulación, 
 |---|---|---|
 | Primarios | Dueños de pequeños negocios y sus cajeros | Usan la aplicación día a día. El dueño configura el programa, los premios y consulta su panel; el cajero registra clientes, compras y canjes con su PIN. |
 | Secundarios | Los clientes del negocio | No instalan nada: consultan su tarjeta desde un enlace, muestran su QR para acumular y ven sus puntos, nivel y premios disponibles. |
-| Administrador | Administrador de la plataforma | No participa en la operación diaria. Aprueba o suspende negocios y administra las plantillas de programas. |
+| De soporte | Administrador de la plataforma | No participa en la operación diaria. Aprueba o suspende negocios y administra las plantillas de programas. |
 
 ## Escenarios
 
