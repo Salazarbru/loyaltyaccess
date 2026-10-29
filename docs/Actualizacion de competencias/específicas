@@ -1,0 +1,24 @@
+Competencias Específicas
+
+Las competencias específicas corresponden a los conocimientos y habilidades técnicas aplicados durante el desarrollo del proyecto de software.
+Rodrigo Rivera
+
+Competencia
+
+Justificación
+
+Análisis de requisitos de software
+
+Se analizaron las necesidades de los usuarios de LoyaltyAccess para identificar los requisitos relacionados con la selección y modificación de recompensas.
+
+Especificación de historias de usuario
+
+Se definieron historias de usuario para describir las funcionalidades solicitadas desde la perspectiva de los usuarios del sistema.
+
+Definición de criterios de aceptación
+
+Se establecieron criterios de aceptación para especificar las condiciones que deben cumplirse para considerar cada historia de usuario como completada.
+
+Documentación de software
+
+Se organizaron y documentaron las historias de usuario y sus criterios de aceptación mediante archivos Markdown dentro del repositorio del proyecto.
