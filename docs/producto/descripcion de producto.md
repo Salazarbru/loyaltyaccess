@@ -27,7 +27,7 @@ Desarrollar una aplicación web para la gestión de programas de lealtad que per
 
 - Considerar que cada negocio es distinto (cafeterías, barberías, estéticas, puestos de comida, tiendas de barrio), por lo que las reglas, premios y niveles deben ser configurables por negocio.
 - Ofrecer facilidades para el uso diario, como plantillas de programa, escaneo del QR con la cámara del celular y cálculo automático de puntos según la regla vigente.
-- Incluir una interfaz para que el cajero encuentre rápido al cliente (QR, código corto o teléfono) y para que el cliente consulte su tarjeta desde un enlace.
+- Incluir una interfaz para que el operador (cajero o dueño) encuentre rápido al cliente (QR, código corto o teléfono) y para que el cliente consulte su tarjeta desde un enlace.
 - Mantener separada la información de cada negocio, ya que la plataforma atiende a varios negocios a la vez.
 - Diseñar la interfaz para uso rápido en mostrador, con pocos toques por operación.
 
@@ -40,7 +40,7 @@ Desarrollar una aplicación web para la gestión de programas de lealtad que per
 
 ## Dinámica del uso del software
 
-El dueño configura su negocio y su programa de lealtad (regla de acumulación, premios y, opcionalmente, niveles). Los clientes se registran con su nombre y teléfono y reciben una tarjeta digital con un QR único. En cada compra, el cajero escanea el QR (o ingresa el código corto), registra el monto o la visita y el sistema abona automáticamente los puntos o sellos. Cuando el cliente alcanza un premio, el cajero lo canjea y el sistema descuenta el saldo. Todos los movimientos quedan guardados en un historial, que el dueño puede consultar en su panel para conocer a sus clientes frecuentes y a los que dejaron de visitar el negocio.
+El dueño configura su negocio y su programa de lealtad (regla de acumulación, premios y, opcionalmente, niveles). Los clientes se registran con su nombre y teléfono y reciben una tarjeta digital con un QR único. En cada compra, el operador —el cajero, si el negocio tiene uno, o el propio dueño cuando opera directamente— escanea el QR (o ingresa el código corto), registra el monto o la visita y el sistema abona automáticamente los puntos o sellos. Cuando el cliente alcanza un premio, el operador lo canjea y el sistema descuenta el saldo. Todos los movimientos quedan guardados en un historial, que el dueño puede consultar en su panel para conocer a sus clientes frecuentes y a los que dejaron de visitar el negocio.
 
 ## Usuarios / Clientes
 
@@ -48,7 +48,7 @@ El dueño configura su negocio y su programa de lealtad (regla de acumulación, 
 |---|---|---|
 | Primarios | Dueños de pequeños negocios y sus cajeros | Usan la aplicación día a día. El dueño configura el programa, los premios y consulta su panel; el cajero registra clientes, compras y canjes con su PIN. |
 | Secundarios | Los clientes del negocio | No instalan nada: consultan su tarjeta desde un enlace, muestran su QR para acumular y ven sus puntos, nivel y premios disponibles. |
-| De soporte | Administrador de la plataforma | No participa en la operación diaria. Aprueba o suspende negocios y administra las plantillas de programas. |
+| Administrador | Administrador de la plataforma | No participa en la operación diaria. Aprueba o suspende negocios y administra las plantillas de programas. |
 
 ## Escenarios
 

@@ -24,10 +24,10 @@ El sistema deberá generar un código QR único para cada tarjeta digital de cli
 El sistema deberá permitir al cliente acceder a su tarjeta digital mediante un enlace, sin necesidad de instalar una aplicación.
 
 ### RF8. Identificación del cliente
-El sistema deberá permitir al cajero identificar a un cliente mediante el escaneo de su código QR, su código corto o su número de teléfono.
+El sistema deberá permitir al operador (cajero o dueño) identificar a un cliente mediante el escaneo de su código QR, su código corto o su número de teléfono.
 
 ### RF9. Registro de compras o visitas
-El sistema deberá permitir al cajero registrar una compra o visita de un cliente, indicando la información necesaria de acuerdo con las reglas configuradas por el negocio.
+El sistema deberá permitir al operador (cajero o dueño) registrar una compra o visita de un cliente, indicando la información necesaria de acuerdo con las reglas configuradas por el negocio.
 
 ### RF10. Acumulación automática de beneficios
 El sistema deberá calcular y agregar automáticamente los sellos o puntos correspondientes a cada compra o visita de acuerdo con las reglas vigentes del programa.
@@ -42,7 +42,7 @@ El sistema deberá permitir al cliente consultar sus sellos o puntos acumulados,
 El sistema deberá permitir al dueño crear, modificar y administrar los premios disponibles dentro del programa de lealtad.
 
 ### RF14. Canje de premios
-El sistema deberá permitir al cajero realizar el canje de un premio cuando el cliente cumpla con los requisitos establecidos.
+El sistema deberá permitir al operador (cajero o dueño) realizar el canje de un premio cuando el cliente cumpla con los requisitos establecidos.
 
 ### RF15. Descuento automático del saldo
 El sistema deberá descontar automáticamente los puntos o sellos utilizados al realizar un canje y registrar la operación correspondiente.
