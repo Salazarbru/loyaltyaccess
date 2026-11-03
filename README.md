@@ -120,7 +120,7 @@ Cada mes presentamos el avance del proyecto en un video:
 | Entrega | Contenido | Enlace |
 | :---: | :--- | :---: |
 | **Entrega 1** | [📄 Ver Resumen y Detalles](docs/entregables/primera%20entrega.md) | [![Ver en YouTube](https://img.shields.io/badge/-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/N_dXznND_VM) |
-| **Entrega 2** | [📄 Ver Resumen y Cambios](docs/entregables/segunda%20entrega.md) | ![Coming soon](https://img.shields.io/badge/⏳_Coming_soon-6b7280?style=for-the-badge) |
+| **Entrega 2** | [📄 Ver Resumen y Cambios](docs/entregables/segunda%20entrega.md) | [![Ver en YouTube](https://img.shields.io/badge/-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/MO43SxSPICg?si=7U6mSmDo8vN4wqTA) |
 </div>
 
 > Los enlaces de las siguientes entregas se irán adjuntando conforme se publiquen.
