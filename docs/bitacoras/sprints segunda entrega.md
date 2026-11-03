@@ -91,7 +91,8 @@ El 27 de octubre se crearon los issues #48 a #58 y se asignó al menos uno a cad
 
 - Siete historias de usuario (HU-01 a HU-07) con criterios de aceptación.
 - Diagrama general de casos de uso que consolida los cuatro actores.
-- Matriz de trazabilidad RF ↔ clases (RF1–RF19) y matriz RNF ↔ diseño (RNF1–RNF24).
+- Matriz de trazabilidad RF ↔ clases (RF1–RF28) y matriz RNF ↔ diseño (RNF1–RNF24).
+- Revisión de cohesión entre historias, requisitos, casos de uso, clases y matrices.
 - Documentación de proceso: sprints, reuniones, métrica de contribución y resumen de cambios.
 
 ### Retrospectiva

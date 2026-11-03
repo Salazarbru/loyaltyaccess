@@ -72,7 +72,7 @@ El sistema deberá proporcionar al dueño información que permita identificar a
 El sistema deberá permitir al dueño identificar clientes que hayan dejado de visitar el negocio mediante el análisis de su historial de actividad.
 
 ### RF24. Administración de negocios
-El sistema deberá permitir al administrador de la plataforma aprobar, suspender y administrar los negocios registrados.
+El sistema deberá permitir al administrador de la plataforma aprobar, suspender (registrando el motivo), reactivar y administrar los negocios registrados. Mientras un negocio esté suspendido no podrá registrar compras ni canjes.
 
 ### RF25. Administración de plantillas
 El sistema deberá permitir al administrador de la plataforma crear y administrar las plantillas de programas de lealtad disponibles para los negocios.
@@ -82,3 +82,6 @@ El sistema deberá mantener separada la información de clientes, programas, pre
 
 ### RF27. API de integración
 El sistema podrá proporcionar una API que permita integrar LoyaltyAccess con sistemas de ventas externos cuando el negocio ya cuente con uno.
+
+### RF28. Reversión de canjes
+El sistema deberá permitir al dueño (en su negocio) y al administrador de la plataforma revertir un canje fallido o duplicado, devolviendo los puntos o sellos al cliente mediante un movimiento de anulación que referencie al canje original, registre el motivo y nunca borre el movimiento anulado.

@@ -126,8 +126,9 @@ Registro de las reuniones del equipo durante la segunda entrega: acuerdos, confl
 ### Acuerdos
 
 1. Completar la documentación de proceso (#51 a #55) en un solo PR hacia `segunda-entrega`.
-2. José Correa termina y publica el video (#56); al tenerlo se agrega el enlace al README.
-3. Después de la entrega, reubicar las matrices de trazabilidad dentro de `docs/artefactos/` e integrar `segunda-entrega` a `main`.
+2. Revisión de cohesión: el actor "soporte técnico" se unifica con el Administrador de la plataforma; HU-05 (directorio de negocios) se reemplaza por avisos al cliente para respetar RF26; HU-07 suspende negocios; se agrega RF28 (reversión de canjes) y se completa la matriz RF hasta RF28.
+3. José Correa termina y publica el video (#56); al tenerlo se agrega el enlace al README.
+4. Después de la entrega, reubicar las matrices de trazabilidad dentro de `docs/artefactos/` e integrar `segunda-entrega` a `main`.
 
 ### Tareas
 

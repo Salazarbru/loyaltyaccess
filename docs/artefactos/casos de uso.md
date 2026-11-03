@@ -74,8 +74,8 @@ flowchart LR
     Operador --- UC4
 
     UC2a -. "<<extend>>" .-> UC2
-    UC2 -. "<<include>>" .-> UC2b
-    UC2 -. "<<include>>" .-> UC2c
+    UC2b -. "<<extend>>" .-> UC2
+    UC2c -. "<<extend>>" .-> UC2
 
     UC3 -. "<<include>>" .-> UC3a
     UC3 -. "<<include>>" .-> UC3b
@@ -132,19 +132,25 @@ flowchart LR
     subgraph LoyaltyAccess
         UC1(["Gestionar negocios"])
         UC2(["Gestionar plantillas"])
+        UC3(["Revertir canje"])
         UC1a(["Aprobar negocio"])
         UC1b(["Suspender negocio"])
+        UC1c(["Reactivar negocio"])
+        UC1d(["Registrar motivo de suspensión"])
         UC2a(["Crear plantilla"])
         UC2b(["Modificar plantilla"])
     end
 
     Admin --- UC1
     Admin --- UC2
+    Admin --- UC3
 
     UC1a -. "<<extend>>" .-> UC1
     UC1b -. "<<extend>>" .-> UC1
+    UC1c -. "<<extend>>" .-> UC1
+    UC1b -. "<<include>>" .-> UC1d
     UC2a -. "<<extend>>" .-> UC2
     UC2b -. "<<extend>>" .-> UC2
 ```
 
-Este diagrama muestra las funciones del administrador de LoyaltyAccess, como la gestión de negocios registrados (incluida la suspensión de negocios con actividad sospechosa) y de las plantillas de programas de lealtad.
+Este diagrama muestra las funciones del administrador de LoyaltyAccess, como la gestión de negocios registrados (aprobación, suspensión con motivo de negocios con actividad sospechosa y su reactivación), la administración de las plantillas de programas de lealtad y la reversión de canjes fallidos o duplicados al atender reportes de soporte, función que comparte con el dueño (HU-06, RF28).

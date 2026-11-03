@@ -2,7 +2,7 @@
 
 **Indicador:** refinamiento de artefactos
 
-**Fuentes:** `casos de uso.md` (diagramas por actor), `historias de usuario.md` (HU-01 a HU-07), `requisitos funcionales.md` (RF1–RF27), `diagramas de clases.md` y el código de la rama `segunda-entrega`.
+**Fuentes:** `casos de uso.md` (diagramas por actor), `historias de usuario.md` (HU-01 a HU-07), `requisitos funcionales.md` (RF1–RF28), `diagramas de clases.md` y el código de la rama `segunda-entrega`.
 
 Este diagrama consolida en una sola vista los cuatro diagramas por actor de [casos de uso](casos%20de%20uso.md).
 
@@ -29,7 +29,7 @@ Este diagrama consolida en una sola vista los cuatro diagramas por actor de [cas
 | **Dueño del negocio** | Registra su negocio, configura el programa de lealtad y consulta su panel. Hereda de Operador, por lo que también puede atender en mostrador sin necesidad de registrar cajeros. |
 | **Operador** | Actor genérico que atiende en mostrador: identifica clientes, registra compras o visitas y canjea premios. Se especializa en **Cajero** (se autentica con PIN) y en **Dueño** (se autentica con su cuenta). |
 | **Cliente** | Consulta su tarjeta digital desde un enlace, sin instalar ninguna aplicación. |
-| **Administrador de la plataforma** | Aprueba, suspende y reactiva negocios, administra las plantillas de programas y revierte canjes fallidos o duplicados (rol de soporte técnico). |
+| **Administrador de la plataforma** | Aprueba, suspende y reactiva negocios, administra las plantillas de programas y revierte canjes fallidos o duplicados al atender reportes de soporte. |
 
 ## Casos de uso por actor
 
@@ -90,10 +90,10 @@ Estado del código según la rama `segunda-entrega`: hoy solo existe la entidad 
 | Canjear premio | HU-04 | RF14, RF15 |
 | Aplicar control antifraude | HU-03 | RF18 |
 | Acceder a tarjeta digital | HU-04 | RF5, RF6, RF7, RF12 |
-| Recibir notificaciones | — | RF20 | Pendiente |
+| Recibir notificaciones | HU-05 | RF20 |
 | Gestionar negocios (aprobar, suspender, reactivar) | HU-07 | RF24 |
 | Gestionar plantillas | — | RF25 |
-| Revertir canje fallido o duplicado | HU-06 | RF16, RF18 |
+| Revertir canje fallido o duplicado | HU-06 | RF16, RF28 |
 
 ## Refinamientos respecto a los diagramas anteriores
 
@@ -101,5 +101,5 @@ Estado del código según la rama `segunda-entrega`: hoy solo existe la entidad 
 2. **Casos de uso compartidos:** Identificar cliente, Registrar movimiento en historial y Aplicar control antifraude se dibujan una sola vez y los comparten Registrar compra y Canjear premio. Antes estaban duplicados (UC3a/UC4a, UC3d/UC4d, UC3e/UC4e).
 3. **Alternativas de identificación:** el QR, el código corto y el teléfono son variantes del mismo caso de uso, por lo que las tres usan `«extend»`. Antes solo el QR lo usaba y las otras dos eran `«include»`.
 4. **HU-07:** se agregan Reactivar negocio y Registrar motivo de suspensión, según los criterios de aceptación.
-5. **HU-06:** Revertir canje queda también disponible para el Administrador (soporte técnico). El Dueño lo conserva, como en la versión anterior.
+5. **HU-06:** Revertir canje queda también disponible para el Administrador de la plataforma al atender reportes de soporte. El Dueño lo conserva, como en la versión anterior (RF28).
 

@@ -16,7 +16,7 @@
 
 **Justificación:**
 
-El `usuario` contiene a ``operador` y `AdminPlaforma`, estos mismos  son padres `dueno` y `cajero`. El sistema deberá de proteger las funciones y datos de acuerdo con el tipo de `usuario`.
+`Usuario` es la clase base de `Operador` y `AdminPlataforma`, y `Operador` es la clase base de `Dueno` y `Cajero`. Cada rol solo tiene los métodos que le corresponden, y `Negocio` delimita a qué datos puede acceder cada dueño y cajero.
 
 ---
 
@@ -30,7 +30,7 @@ El `usuario` contiene a ``operador` y `AdminPlaforma`, estos mismos  son padres 
   
 **Justificación:**
 
-`Cliente`se encuentra en `usuario` y su cuenta se encuentra en su `TarjetaLealtad`
+`Cliente` es una clase separada de `Usuario`: no tiene credenciales ni acceso al panel, y solo guarda los datos mínimos (`nombre`, `telefono`, `consentimiento`) junto con `solicitarEliminacion()`. Su acceso es por medio de su `TarjetaLealtad`, y `Usuario` guarda la contraseña como `claveHash`, nunca en texto plano.
 
 ---
 
@@ -61,10 +61,11 @@ El `usuario` contiene a ``operador` y `AdminPlaforma`, estos mismos  son padres 
 - `motivo`
 - `movimientoOriginal`
 - `Dueno.anularMovimiento()`
+- `AdminPlataforma.anularMovimiento()`
 
 **Justificación:**
 
-El diseño establece que los movimientos nunca se borran y que una corrección genera un movimiento inverso que referencia al original. Solo `Dueno` puede anular, y la anulación queda registrada. Para que la regla sea efectiva, la capa de persistencia no debe exponer operaciones de actualización o eliminación sobre los movimientos.
+El diseño establece que los movimientos nunca se borran y que una corrección genera un movimiento inverso que referencia al original. Solo `Dueno` y `AdminPlataforma` pueden anular, y la anulación queda registrada con quién la hizo (`registradoPor`). Para que la regla sea efectiva, la capa de persistencia no debe exponer operaciones de actualización o eliminación sobre los movimientos.
 
 ---
 
@@ -88,12 +89,14 @@ El QR se genera a partir del código de la tarjeta, no a partir de datos del cli
 
 
 **Clases, componentes o diseños relacionados:**
-- `Cajero` 
+- `Cajero` (`pinHash`)
 - `Usuario` (`claveHash`)
 
 **Justificación:**
 
-`Cajero` es la única clase que guarda un PIN. La clase base `Usuario` incluye claveHash. Los credenciales y PINs (Cajero.pin) se procesan mediante algoritmos de hashing seguro antes de almacenarse.
+`Cajero` es la única clase que guarda un PIN, y lo hace como `pinHash`; la clase base `Usuario` guarda la contraseña como `claveHash`. El diseño exige aplicar un algoritmo de *hash* seguro (por ejemplo, BCrypt) antes de almacenarlos.
+
+> **Estado en el código:** la entidad `Usuario` ya tiene el campo `claveHash`, pero el endpoint de prueba `POST /api/usuarios` todavía guarda el valor recibido sin aplicar el *hash*. Queda pendiente para la implementación de la autenticación.
 
 ---
 
@@ -346,7 +349,7 @@ Los eventos se publican cuando la tarjeta registra un movimiento, por lo que no 
 - `Operador` (`registrarCompra()`, `canjearPremio()`)
 - `Cajero`
 - `Dueno` (`configurarPrograma()`, `gestionarCajeros()`, `verPanel()`, `anularMovimiento()`)
-- `AdminPlataforma` (`suspenderNegocio()`, `gestionarPlantillas()`)
+- `AdminPlataforma` (`suspenderNegocio()`, `reactivarNegocio()`, `gestionarPlantillas()`, `anularMovimiento()`)
 
 **Justificación:**
 
@@ -371,9 +374,9 @@ El uso de clases puras de dominio sin dependencias rígidas de entorno facilita 
 
 **Clases, componentes o diseños relacionados:**
 - Documento de diagramas de clases (incluye descripción de clases, patrones y pilares de POO)
-- Matriz de trazabilidad RF ↔ clases y  esta matriz RNF
-- Documento de arquitectura
-- Documentación de la API (`AdaptadorApiRest`)
+- Matriz de trazabilidad RF ↔ clases y esta matriz RNF
+- Diagrama general de casos de uso e historias de usuario con criterios de aceptación
+- Interfaz `ConectorVentas` y `AdaptadorApiRest` como contrato de la API (su documentación se elaborará al implementarla)
 
 **Justificación:**
 
