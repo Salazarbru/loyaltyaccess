@@ -30,7 +30,7 @@
 - El sistema debe permitir al cajero ingresar con su clave de acceso.
 - Si la clave es correcta, el sistema debe permitirle registrar compras y realizar canjes.
 - Si la clave es incorrecta, el sistema debe denegar el acceso y mostrar un mensaje de error.
-- El sistema debe impedir que el cajero acceda a funciones exclusivas del dueño o del soporte técnico.
+- El sistema debe impedir que el cajero acceda a funciones exclusivas del dueño o del administrador de la plataforma.
 
 ## Usuarios secundarios
 
@@ -44,36 +44,38 @@
 - El sistema debe mostrar las recompensas disponibles según sus puntos y nivel.
 - Después de una compra o un canje exitoso, el sistema debe reflejar el saldo actualizado.
 
-### HU-05. Consulta de establecimientos afiliados
+### HU-05. Avisos de avance hacia un premio
 
-**Historia de usuario:** Como cliente, quiero conocer qué negocios adoptaron este sistema, para saber a cuáles puedo ir.
+**Historia de usuario:** Como cliente, quiero recibir un aviso cuando acumule puntos o sellos y cuando me acerque a un premio, para saber cuándo puedo canjearlo.
 
 **Criterios de aceptación:**
-- El sistema debe mostrar una lista de los establecimientos afiliados activos.
-- Cada establecimiento debe mostrar su nombre y ubicación.
-- El cliente debe poder consultar la información de un establecimiento seleccionado.
-- Los establecimientos suspendidos o dados de baja no deben aparecer como disponibles.
+- Después de registrar una compra o visita, el sistema debe avisar al cliente cuántos puntos o sellos acumuló.
+- Cuando al cliente le falte poco para un premio, el sistema debe indicarle cuánto le falta.
+- Cuando el cliente alcance un premio, el sistema debe avisarle que ya puede canjearlo.
+- El sistema no debe enviar avisos de operaciones que no se registraron o que fueron anuladas.
+- El aviso solo debe incluir información del negocio donde el cliente realizó la compra.
 
-## Usuario de soporte
+## Administración y soporte
 
 ### HU-06. Reversión de canjes
 
-**Historia de usuario:** Como soporte técnico, quiero revertir un canje fallido o duplicado, para devolver los puntos al consumidor.
+**Historia de usuario:** Como dueño de un establecimiento o administrador de la plataforma, quiero revertir un canje fallido o duplicado, para devolver los puntos al consumidor.
 
 **Criterios de aceptación:**
-- El sistema debe permitir al personal de soporte buscar y seleccionar un canje registrado.
-- Antes de confirmar la reversión, el sistema debe mostrar los datos del canje seleccionado.
+- El dueño debe poder buscar y seleccionar un canje registrado en su negocio; el administrador, el de cualquier negocio al atender un reporte.
+- Antes de confirmar la reversión, el sistema debe mostrar los datos del canje seleccionado y solicitar un motivo.
 - Al confirmar una reversión válida, el sistema debe devolver los puntos correspondientes al cliente.
+- El sistema no debe borrar el canje original: debe registrar un movimiento de anulación que lo referencie.
 - El sistema debe impedir que un mismo canje se revierta más de una vez.
-- El sistema debe registrar la reversión para futuras auditorías.
+- La reversión debe quedar registrada con fecha, motivo y usuario que la realizó para futuras auditorías.
 
-### HU-07. Suspensión de cuentas sospechosas
+### HU-07. Suspensión de negocios sospechosos
 
-**Historia de usuario:** Como soporte técnico, quiero suspender temporalmente una cuenta con actividad sospechosa, para prevenir fraudes mientras se investiga.
+**Historia de usuario:** Como administrador de la plataforma, quiero suspender temporalmente un negocio con actividad sospechosa, para prevenir fraudes mientras se investiga.
 
 **Criterios de aceptación:**
-- El sistema debe permitir al personal de soporte suspender temporalmente una cuenta.
+- El sistema debe permitir al administrador suspender temporalmente un negocio.
 - Antes de confirmar la suspensión, el sistema debe solicitar un motivo.
-- Una cuenta suspendida no debe poder realizar compras o canjes que afecten el programa de lealtad.
-- El sistema debe informar cuando una cuenta esté suspendida.
-- El sistema debe permitir reactivar la cuenta cuando la investigación haya concluido y se autorice su reactivación.
+- Mientras esté suspendido, en el negocio no se podrán registrar compras ni canjes que afecten el programa de lealtad.
+- El sistema debe informar al dueño y a sus cajeros que el negocio está suspendido.
+- El sistema debe permitir reactivar el negocio cuando la investigación haya concluido y se autorice su reactivación.

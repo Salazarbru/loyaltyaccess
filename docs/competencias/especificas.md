@@ -43,10 +43,11 @@ Las competencias específicas corresponden a los conocimientos y habilidades té
 
 ---
 
-## [Nombre del integrante]
+## Rodrigo Salazar
 
 | Competencia | Justificación |
 |-------------|---------------|
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia específica] | [Explicar cómo se aplicó durante el proyecto.] |
+| Especificación de sistemas de software | Se elaboró la descripción de producto de LoyaltyAccess: objetivo, usuarios, escenarios de uso, obstáculos externos y propuesta de valor (#6). |
+| Diseño de software orientado a objetos | Se diseñó el diagrama de clases del dominio en Mermaid, aplicando los patrones Strategy, Decorator, Observer, Factory Method y Adapter, y los pilares de la POO (#19). |
+| Gestión de proyectos de software | Se creó la estructura del repositorio y de `docs/`, se definió el criterio de medición por tallas de la bitácora de contribución y se repartieron los issues del hito *Weekly 1* (#7). |
+| Control de versiones | Se revisaron e integraron mediante *pull requests* las ramas de cada integrante y se corrigieron el README y la organización final de la documentación (#21, #26). |

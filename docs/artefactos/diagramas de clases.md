@@ -58,8 +58,10 @@ classDiagram
     }
     class AdminPlataforma {
         +aprobarNegocio()
-        +suspenderNegocio()
+        +suspenderNegocio(String motivo)
+        +reactivarNegocio()
         +gestionarPlantillas()
+        +anularMovimiento()
     }
     class Negocio {
         -String nombre
@@ -67,8 +69,9 @@ classDiagram
         -String logo
         -EstadoNegocio estado
         -String apiKey
+        -String motivoSuspension
         +activar()
-        +suspender()
+        +suspender(String motivo)
     }
     class ProgramaLealtad {
         -String nombre
@@ -110,7 +113,7 @@ classDiagram
 
 ## 2. Movimientos de la tarjeta
 
-El saldo de una tarjeta no se edita directamente: se calcula a partir de sus movimientos, que nunca se borran. Una anulación genera un movimiento inverso que referencia al original.
+El saldo de una tarjeta no se edita directamente: se calcula a partir de sus movimientos, que nunca se borran. Una anulación genera un movimiento inverso que referencia al original y la puede registrar el dueño o el administrador de la plataforma, por lo que `registradoPor` es un `Usuario` y no solo un `Operador`.
 
 ```mermaid
 classDiagram
@@ -124,7 +127,7 @@ classDiagram
         -int id
         -DateTime fecha
         -int puntos
-        -Operador registradoPor
+        -Usuario registradoPor
         -String referenciaExterna
         +aplicar(TarjetaLealtad tarjeta)
     }
@@ -356,8 +359,8 @@ classDiagram
 | `Operador` | Abstracta | Agrupa lo que puede hacer quien atiende en mostrador: registrar compras y canjear premios. | Hereda de `Usuario`; padre de `Dueno` y `Cajero`. |
 | `Dueno` | Concreta | Configura el programa, gestiona cajeros, premios y promociones, anula movimientos, consulta clientes frecuentes e inactivos y consulta el panel; también puede operar directamente si trabaja solo. | Hereda de `Operador`; administra `Negocio`. |
 | `Cajero` | Concreta | Empleado opcional que registra compras y canjes con su PIN. | Hereda de `Operador`; pertenece a un `Negocio`. |
-| `AdminPlataforma` | Concreta | Aprueba o suspende negocios y administra plantillas. | Hereda de `Usuario`. |
-| `Negocio` | Concreta | Representa un comercio y agrupa su programa, cajeros y tarjetas. | Pertenece a un `Dueno`; emite `TarjetaLealtad`. |
+| `AdminPlataforma` | Concreta | Aprueba, suspende (con motivo) y reactiva negocios, administra plantillas y anula canjes fallidos o duplicados al atender reportes. | Hereda de `Usuario`. |
+| `Negocio` | Concreta | Representa un comercio y agrupa su programa, cajeros y tarjetas; guarda su estado y el motivo de una suspensión. | Pertenece a un `Dueno`; emite `TarjetaLealtad`. |
 | `ProgramaLealtad` | Concreta | Define reglas, premios y niveles, y calcula los puntos. | Usa `ReglaAcumulacion`; ofrece `Premio` y `Nivel`. |
 | `Cliente` | Concreta | Persona que participa en el programa de un negocio. | Tiene una `TarjetaLealtad` por negocio. |
 | `TarjetaLealtad` | Concreta | Cuenta del cliente: QR, código corto, saldo y nivel. | Registra `Movimiento`; publica eventos. |

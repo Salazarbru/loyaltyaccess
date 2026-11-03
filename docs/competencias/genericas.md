@@ -43,10 +43,10 @@ Las competencias genéricas corresponden a las habilidades generales desarrollad
 
 ---
 
-## [Nombre del integrante]
+## Rodrigo Salazar
 
 | Competencia | Justificación |
 |-------------|---------------|
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
-| [Competencia] | [Explicar cómo se aplicó durante el proyecto.] |
+| Liderazgo | Como Scrum Master, se coordinó al equipo en la primera entrega, asignando responsables y revisores a cada documento. |
+| Capacidad de abstracción | Se tradujo la idea del producto a un modelo de clases que separa usuarios, negocio, movimientos, premios y reglas de acumulación. |
+| Comunicación | Se redactó la descripción de producto y la bitácora de contribución de forma clara para que todo el equipo partiera de la misma visión del proyecto. |

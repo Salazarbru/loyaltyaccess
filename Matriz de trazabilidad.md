@@ -2,7 +2,7 @@
 # Matriz de trazabilidad RF ↔ clases
 
 **Proyecto:** LoyaltyAccess  
-**Alcance:** RF1–RF19  
+**Alcance:** RF1–RF28  
 **Objetivo:** Relacionar cada requisito funcional con las clases que participan en su implementación.
 
 ---
@@ -278,7 +278,7 @@ El saldo de la tarjeta se calcula a partir de sus movimientos. `MovimientoCanje`
 
 **Justificación:**
 
-`Cajero` contiene un PIN y un estado activo. `ProgramaLealtad` incluye el intervalo mínimo entre visitas. Los movimientos se conservan y las anulaciones quedan registradas.
+`Cajero` contiene un PIN protegido (`pinHash`) y un estado activo. `ProgramaLealtad` incluye el intervalo mínimo entre visitas. Los movimientos se conservan y las anulaciones quedan registradas.
 
 ---
 
@@ -293,4 +293,132 @@ El saldo de la tarjeta se calcula a partir de sus movimientos. `MovimientoCanje`
 
 **Justificación:**
 
-`Dueno` dispone del método `gestionarCajeros()`. `Negocio` puede tener varios cajeros y `Cajero` contiene los atributos `pin` y `activo`.
+`Dueno` dispone del método `gestionarCajeros()`. `Negocio` puede tener varios cajeros y `Cajero` contiene los atributos `pinHash` y `activo`.
+
+---
+
+## RF20. Notificaciones al cliente
+
+**Clases relacionadas:**
+- `TarjetaLealtad`
+- `GestorEventos`
+- `EventoLealtad`
+- `ObservadorLealtad`
+- `NotificadorWhatsApp`
+- `NotificadorCorreo`
+
+**Justificación:**
+
+Al registrar un movimiento, `TarjetaLealtad` publica un `EventoLealtad` (puntos abonados, premio cercano o disponible) en `GestorEventos`, que avisa a los notificadores suscritos (patrón Observer).
+
+---
+
+## RF21. Gestión de promociones
+
+**Clases relacionadas:**
+- `Dueno`
+- `ProgramaLealtad`
+- `ReglaAcumulacion`
+- `ReglaPromocional`
+
+**Justificación:**
+
+`Dueno` dispone de `gestionarPromociones()`. `ReglaPromocional` envuelve a la regla base del programa con un multiplicador, días y vigencia (patrón Decorator), sin modificarla.
+
+---
+
+## RF22. Consulta de clientes frecuentes
+
+**Clases relacionadas:**
+- `Dueno`
+- `TarjetaLealtad`
+- `Movimiento`
+- `MovimientoAcumulacion`
+
+**Justificación:**
+
+`Dueno` dispone de `consultarClientesFrecuentes()`. La frecuencia se obtiene de los movimientos de acumulación registrados en cada tarjeta.
+
+---
+
+## RF23. Identificación de clientes inactivos
+
+**Clases relacionadas:**
+- `Dueno`
+- `TarjetaLealtad`
+- `Movimiento`
+
+**Justificación:**
+
+`Dueno` dispone de `identificarClientesInactivos()`. La inactividad se determina por la fecha del último movimiento de cada tarjeta.
+
+---
+
+## RF24. Administración de negocios
+
+**Clases relacionadas:**
+- `AdminPlataforma`
+- `Negocio`
+
+**Justificación:**
+
+`AdminPlataforma` dispone de `aprobarNegocio()`, `suspenderNegocio(motivo)` y `reactivarNegocio()`. `Negocio` guarda su `estado` y el `motivoSuspension`, y ofrece `activar()` y `suspender(motivo)`.
+
+---
+
+## RF25. Administración de plantillas
+
+**Clases relacionadas:**
+- `AdminPlataforma`
+- `FabricaReglas`
+- `ReglaAcumulacion`
+
+**Justificación:**
+
+`AdminPlataforma` dispone de `gestionarPlantillas()`. `FabricaReglas` crea la regla de acumulación correspondiente a partir de una plantilla (patrón Factory Method).
+
+---
+
+## RF26. Separación de información por negocio
+
+**Clases relacionadas:**
+- `Negocio`
+- `Cajero`
+- `ProgramaLealtad`
+- `TarjetaLealtad`
+- `Cliente`
+
+**Justificación:**
+
+Cajeros, programa y tarjetas dependen de un `Negocio`. Un `Cliente` tiene una tarjeta distinta por negocio, por lo que sus puntos, premios y movimientos nunca se mezclan entre negocios.
+
+---
+
+## RF27. API de integración
+
+**Clases relacionadas:**
+- `ServicioLealtad`
+- `ConectorVentas`
+- `AdaptadorApiRest`
+- `AdaptadorCsv`
+- `AdaptadorManual`
+- `Negocio`
+
+**Justificación:**
+
+El núcleo solo conoce la interfaz `ConectorVentas`; cada adaptador traduce las compras de una fuente distinta (patrón Adapter). `Negocio` guarda la `apiKey` con la que se autentica la integración.
+
+---
+
+## RF28. Reversión de canjes
+
+**Clases relacionadas:**
+- `Dueno`
+- `AdminPlataforma`
+- `MovimientoAnulacion`
+- `MovimientoCanje`
+- `TarjetaLealtad`
+
+**Justificación:**
+
+`Dueno` y `AdminPlataforma` disponen de `anularMovimiento()`. La reversión crea un `MovimientoAnulacion` con `motivo` y `movimientoOriginal`, que devuelve los puntos sin borrar el `MovimientoCanje` original.

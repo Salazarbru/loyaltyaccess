@@ -101,6 +101,14 @@ Seguimiento semanal y reportes de desarrollo del equipo, todo reunido en un solo
 
 [![Ver todas las bitácoras](https://img.shields.io/badge/📊_Ver_todas_las_bitácoras-d97706?style=for-the-badge)](docs/bitacoras/)
 
+| Bitácora | Entrega |
+|:--|:-:|
+| [Contribución — 1.ª entrega](docs/bitacoras/bitacora%20de%20contribucionpd1.md) | 1 |
+| [Weekly 1](docs/bitacoras/bitacora%20weekly1.md) | 1 |
+| [Sprints](docs/bitacoras/sprints%20segunda%20entrega.md) | 2 |
+| [Reuniones](docs/bitacoras/bitacora%20de%20reuniones.md) | 2 |
+| [Contribución — 2.ª entrega](docs/bitacoras/bitacora%20de%20contribucionpd2.md) | 2 |
+
 ---
 
 ## 🎬 Entregas
@@ -112,7 +120,7 @@ Cada mes presentamos el avance del proyecto en un video:
 | Entrega | Contenido | Enlace |
 | :---: | :--- | :---: |
 | **Entrega 1** | [📄 Ver Resumen y Detalles](docs/entregables/primera%20entrega.md) | [![Ver en YouTube](https://img.shields.io/badge/-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/N_dXznND_VM) |
-| **Entrega 2** | Próximamente | ![Coming soon](https://img.shields.io/badge/⏳_Coming_soon-6b7280?style=for-the-badge) |
+| **Entrega 2** | [📄 Ver Resumen y Cambios](docs/entregables/segunda%20entrega.md) | ![Coming soon](https://img.shields.io/badge/⏳_Coming_soon-6b7280?style=for-the-badge) |
 </div>
 
 > Los enlaces de las siguientes entregas se irán adjuntando conforme se publiquen.
@@ -125,6 +133,11 @@ Competencias desarrolladas a lo largo del proyecto:
 
 [![Específicas](https://img.shields.io/badge/🎓_Competencias-Específicas-6d28d9?style=for-the-badge)](docs/competencias/especificas.md)
 [![Genéricas](https://img.shields.io/badge/🌐_Competencias-Genéricas-2563eb?style=for-the-badge)](docs/competencias/genericas.md)
+
+Segunda entrega:
+
+[![Específicas 2](https://img.shields.io/badge/🎓_Específicas-2.ª_entrega-6d28d9?style=for-the-badge)](docs/Actualizacion%20de%20competencias/espec%C3%ADficas.md)
+[![Genéricas 2](https://img.shields.io/badge/🌐_Genéricas-2.ª_entrega-2563eb?style=for-the-badge)](docs/Actualizacion%20de%20competencias/genericas.md)
 
 ---
 
